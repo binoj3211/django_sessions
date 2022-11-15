@@ -1,0 +1,50 @@
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Logged_In</title>
+     </head>
+     <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+ <style>.btn{
+    text-align: center;
+    margin-left: 400px;
+    width: 300px;
+    border-radius:20px;
+    background-color: darkslateblue;
+    border: solid 3px #414580;
+	transition: background-color 2s;
+ }  
+ </style> 
+<body>
+     <div class="container">
+        <div class="row">
+     <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">EMAIL</th>
+            <th scope="col">NAME</th>
+            <th scope="col">AGE</th>
+            <th scope="col">GENDER</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ request.session.email }}</td>
+            <td>{{ request.session.name }}</td>
+            <td>{{ request.session.age }}</td>
+            <td>{{ request.session.gender }}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+  
+  
+</div>
+<a class="btn btn-primary" type="button" href="{% url 'logout' %}">LOGOUT</a>
+</div>
+
+</body>
+</html>
